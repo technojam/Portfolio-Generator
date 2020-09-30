@@ -1,0 +1,40 @@
+###register
+POST http://localhost:3000/api/user/register
+content-type: application/json
+
+{
+    "name": "shivansh",
+    "email":"dfsdsfdsfds@gmail.com",
+    "password":"1234566"
+}
+###login
+POST http://localhost:3000/api/user/login
+content-type: application/json
+
+{
+    "email":"shigvffhdfdfsh@gmail.com",
+    "password":"1234566"
+}
+### accessing protected route
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE0ODkwNjYsImV4cCI6MTYwMTQ5NjI2NiwiYXVkIjoiNWY3NGM4NzgxZWZmMDgxZjI4NTEwNzNjIiwiaXNzIjoicG9ydGZvbGlvX2dlbmVyYXRvciJ9.AcWcAs8ztx3gyR66xuN_S2pX1sQ-vkzM9Aa0f-X39wg
+
+
+###  refresh token
+POST http://localhost:3000/api/user/refresh-token
+Content-Type: application/json
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE0ODgyOTcsImV4cCI6MTYwMTQ5NTQ5NywiYXVkIjoiNWY1N2FhMGUzNzVmMmUwMGE0N2Y4OGJhIiwiaXNzIjoiZnJlZWxhbmNlIn0.PksWro0f_w9SsXQlt3HEy0bBDGHMXbJM1Jp2oDvauhs"
+}
+###   logout
+DELETE http://localhost:3000/api/user/logout
+Content-Type: application/json
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE0ODgyOTcsImV4cCI6MTYwMTQ5NTQ5NywiYXVkIjoiNWY1N2FhMGUzNzVmMmUwMGE0N2Y4OGJhIiwiaXNzIjoiZnJlZWxhbmNlIn0.PksWro0f_w9SsXQlt3HEy0bBDGHMXbJM1Jp2oDvauhs"
+}
+
+
+
+
+
+
