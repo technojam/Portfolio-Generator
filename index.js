@@ -1,5 +1,7 @@
 const express = require("express");
-
+const passport = require("passport");
+const keys = require("./config/keys");
+const cookieSession = require("cookie-session");
 //ROUTES
 const authRoute = require("./routes/auth");
 
@@ -12,7 +14,7 @@ const mongoose = require("mongoose");
 mongoose.connect(
     "mongodb+srv://Shivansh:dojo@cluster0.n0cr0.mongodb.net/Clusters?retryWrites=true&w=majority", {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
     },
 
     () => {
@@ -22,6 +24,18 @@ mongoose.connect(
 mongoose.set("useCreateIndex", true);
 
 //
+app.use(
+    cookieSession({
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+        keys: [keys.cookieKey],
+    })
+);
+app.use(passport.initialize());
+app.use(passport.session());
+require("./services/passport");
+require("./routes/oauth")(app);
+//
+
 const {
     verifyAccessToken
 } = require("./webToken/jwt");
