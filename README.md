@@ -1,3 +1,38 @@
+# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/technojam/portfolio_generator?color=blue)](https://github.com/technojam/portfolio_generator/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/technojam/portfolio_generator)](https://github.com/technojam/portfolio_generator/stargazers) 
+
+## A clean, beautiful and responsive portfolio template for Developers!
+
+
+
+Just change `src/portfolio.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
+
+But if you want to **contribute** and make this much better for other developer have a look at [Issues](https://github.com/technojam/portfolio_generator/issues).
+
+
+If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/technojam/portfolio_generator/pulls).
+
+
+
+## How To Use 🔧
+
+From your command line, clone and run developerFolio:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/technojam/portfolio_generator.git
+
+# Go into the repository
+$ cd portfolio_generator
+
+# Install dependencies
+$ npm install
+
+#Start's development server
+$ npm start
+```
+
+
+
 # portfolio_generator
 
 Frontend
