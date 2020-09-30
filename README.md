@@ -15,7 +15,7 @@ If you created something awesome and want to contribute then feel free to open a
 
 ## How To Use 🔧
 
-From your command line, clone and run developerFolio:
+From your command line, clone and run portfolio_generator:
 
 ```bash
 # Clone this repository
