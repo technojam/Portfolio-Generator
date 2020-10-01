@@ -102,7 +102,22 @@ router.post("/refresh-token", async (req, res, next) => {
 //delete route
 
 router.delete("/logout", async (req, res, next) => {
-
-});
+    console.log("logout");
+    try {
+      const { refreshToken } = req.body;
+      if (!refreshToken) throw createError.BadRequest();
+      const userId = await verifyRefreshToken(refreshToken);
+      client.DEL(userId, (err, val) => {
+        if (err) {
+          console.log(err.message);
+          throw createError.InternalServerError();
+        }
+        console.log(val);
+        res.sendStatus(204);
+      });
+    } catch (error) {
+      next(error);
+    }
+  });
 
 module.exports = router;
