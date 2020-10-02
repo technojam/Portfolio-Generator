@@ -1,37 +1,42 @@
-# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/technojam/portfolio_generator?color=blue)](https://github.com/technojam/portfolio_generator/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/technojam/portfolio_generator)](https://github.com/technojam/portfolio_generator/stargazers) 
+# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/technojam/portfolio_generator?color=blue)](https://github.com/technojam/portfolio_generator/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/technojam/portfolio_generator)](https://github.com/technojam/portfolio_generator/stargazers)
+
+# Hacktoberfest_2020
+
+![img](https://embed-fastly.wistia.com/deliveries/49bd387c40e2c5aada92abdf973bc46d.webp?image_crop_resized=960x540)
+
+A repository where you can find beautiful and responsive portfoilo template. Feel free to make your amazing portfoilo :)
+
+## Steps to Contribute 🔧
+
+1. Fork the repository
+
+2. Clone your forked repository using terminal or gitbash.
+
+```
+git clone <link-of-repos>
+```
+
+3. Make changes to the cloned repos
+
+4. Run the following three commands
+
+```
+git add .
+git commit -m "Your-msg-here"
+git push origin master
+```
+
+5. Then in github , in your cloned repository find the option to make a pull request
+
+<b> Successfully you have created a PR </b> :smiley:
 
 ## A clean, beautiful and responsive portfolio template for Developers!
-
-
 
 Just change `src/portfolio.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
 
 But if you want to **contribute** and make this much better for other developer have a look at [Issues](https://github.com/technojam/portfolio_generator/issues).
 
-
 If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/technojam/portfolio_generator/pulls).
-
-
-
-## How To Use 🔧
-
-From your command line, clone and run portfolio_generator:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/technojam/portfolio_generator.git
-
-# Go into the repository
-$ cd portfolio_generator
-
-# Install dependencies
-$ npm install
-
-#Start's development server
-$ npm start
-```
-
-
 
 # portfolio_generator
 
