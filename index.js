@@ -32,7 +32,7 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-require("./services/passport");
+require("./SERVICES/passport");
 require("./routes/oauth")(app);
 //
 
