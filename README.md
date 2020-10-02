@@ -1,47 +1,70 @@
-# Software Developer Folio ⚡️ [![GitHub](https://img.shields.io/github/license/technojam/portfolio_generator?color=blue)](https://github.com/technojam/portfolio_generator/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/technojam/portfolio_generator)](https://github.com/technojam/portfolio_generator/stargazers)
+# Developer's Portfolio:heart:
 
-# Hacktoberfest_2020
+<p>An application where you can find beautiful and responsive portfoilo templates:heart_eyes:</p>
 
-![img](https://embed-fastly.wistia.com/deliveries/49bd387c40e2c5aada92abdf973bc46d.webp?image_crop_resized=960x540)
+# :heavy_plus_sign: Technologies used:
 
-A repository where you can find beautiful and responsive portfoilo template. Feel free to make your amazing portfoilo :)
+### For Frontend:
+:heavy_check_mark: CSS
 
-## Steps to Contribute 🔧
+:heavy_check_mark: React
+
+### For Backend:
+:heavy_check_mark: Node
+
+:heavy_check_mark: Express
+
+### For Database:
+:heavy_check_mark: MongoDB
+
+### For Deployment:
+:heavy_check_mark: Heroku
+
+## How to Contribute:
 
 1. Fork the repository
-
 2. Clone your forked repository using terminal or gitbash.
 
 ```
 git clone <link-of-repos>
 ```
 
-3. Make changes to the cloned repos
-
-4. Run the following three commands
+3. Make changes to the cloned repository(valid changes/ addition of new features/ solving issues).
+4. Run the following three commands:
 
 ```
 git add .
 git commit -m "Your-msg-here"
 git push origin master
 ```
+5. Create a pull request.
 
-5. Then in github , in your cloned repository find the option to make a pull request
+<b>You have created a PR successfully:clap:</b>
 
-<b> Successfully you have created a PR </b> :smiley:
+<i> Thanks for contributing:sparkles:</i>
 
-## A clean, beautiful and responsive portfolio template for Developers!
+# :question: How to get your own portfolio?
+## Here is the spoiler alert :astonished::collision:
 
-Just change `src/portfolio.js` to get your personal portfolio. Feel free to use it as-is or customize it as much as you want.
+Just change `src/portfolio.js` to get your personal portfolio. Feel free to use it or customize it as much as you want.
+### Woahhhh!! You have made it within minutes.:fire:
 
-But if you want to **contribute** and make this much better for other developer have a look at [Issues](https://github.com/technojam/portfolio_generator/issues).
+### Fix new issues-
+Make this much better for other developers have a look at [Issues](https://github.com/technojam/portfolio_generator/issues).
 
-If you created something awesome and want to contribute then feel free to open an [pull request](https://github.com/technojam/portfolio_generator/pulls).
-
-# portfolio_generator
-
-Frontend
+### `View map of the frontend is given here`
 https://docs.google.com/document/d/1aQqnbFk0NB7o2_wXi0zgsV49hEfk08avl2IqJ_u7C0A/edit?usp=sharing
 
-backend
+### `View map of the backend is given here`
 https://docs.google.com/document/d/1tGkecoK42EahTXAybLyyqHMqMse4QMQ1b33k2QfCkIo/edit?usp=sharing
+
+
+## Learn More
+- React: Check out the [React documentation](https://reactjs.org/)
+- MongoDB: Check out the [MongoDB documentation](https://docs.mongodb.com/)
+- Node: Check out the [Node documentation](https://nodejs.org/en/docs/)
+- Express: Check out the [Express documentation](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
+- Heroku:Check out the [Heroku documentation](https://devcenter.heroku.com/categories/deployment)
+## Learn more about packages:
+- [npm](https://www.npmjs.com/package/documentation)
+- [oauth](https://www.npmjs.com/package/oauth)
