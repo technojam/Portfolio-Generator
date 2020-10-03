@@ -32,6 +32,14 @@ Content-Type: application/json
 {
     "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE0ODgyOTcsImV4cCI6MTYwMTQ5NTQ5NywiYXVkIjoiNWY1N2FhMGUzNzVmMmUwMGE0N2Y4OGJhIiwiaXNzIjoiZnJlZWxhbmNlIn0.PksWro0f_w9SsXQlt3HEy0bBDGHMXbJM1Jp2oDvauhs"
 }
+###
+POST http://localhost:3000/api/user/reset-password
+content-type: application/json
+
+{
+    "email":"shivanshrohjhjcks21@gmail.com"
+    
+}
 
 
 
