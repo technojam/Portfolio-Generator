@@ -2,6 +2,7 @@ const express = require("express");
 const passport = require("passport");
 const keys = require("./config/keys");
 const cookieSession = require("cookie-session");
+require('./webToken/init_redis')
 //ROUTES
 const authRoute = require("./routes/auth");
 
