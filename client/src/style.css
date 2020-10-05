@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+.landing-navbar {
+  background: transparent !important ;
+  font-size: 20px;
+}
+
+.landing-navbar.active {
+  background: rgb(22, 26, 29) !important;
+  transition: 0.5s ease-in;
+}
+
+.brand {
+  font-family: "Cookie", cursive;
+  font-size: 35px !important;
+}
+
+#basic-navbar-nav .links {
+  color: white !important;
+}
+
+#main {
+  background-image: url("./images/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head {
+  font-size: 8vh;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .head {
+    color: black;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 999px) {
+  .head {
+    color: black;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .head {
+    color: white;
+  }
+}
+
+img {
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.description {
+  background-color: #98b4d4;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 0px 21px -4px rgba(0, 0, 0, 0.89);
+  -moz-box-shadow: 2px 0px 21px -4px rgba(0, 0, 0, 0.89);
+  box-shadow: 2px 0px 21px -4px rgba(0, 0, 0, 0.89);
+}
+
+.animated {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  .animated:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(56, 52, 52);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .animated:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .animated:hover {
+      color: rgb(56, 52, 52);
+      text-decoration: none;
+  }
