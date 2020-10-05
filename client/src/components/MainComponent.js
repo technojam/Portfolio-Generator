@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
+import Skills from "../containers/skill/Skills";
+import About from "../containers/about/About";
 import Header from './Header';
-
+import Footer from "../components/footer/Footer";
 class Main extends Component {
     render() {
         return (
             <div>
                <Header/> 
-               {/* <Route exact path="/" component={()=> <Home/>}/>
-               <Route path="/home" component={()=> <Home/>}/>
-               <Route path="/about" component={()=> <About/>}/>
-               <Footer/> */}
+               {/* <Home/> */}
+               {/* <About/> */}
+               <Skills/>
+               {/* <Projects/> */}
+               <Footer/> 
             </div>
         );
     }
