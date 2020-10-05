@@ -11,7 +11,9 @@ export default class Header extends Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">My Work</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+              <Nav.Link href="#skill">Skills</Nav.Link>
+              <Nav.Link href="#project">Projects</Nav.Link>
               <Nav.Link href="#link">Login</Nav.Link>
             </Nav>
           </Navbar.Collapse>
