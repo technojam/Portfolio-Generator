@@ -33,8 +33,8 @@ router.get("/:id", (req, res) => {
   User.findOne({ _id: req.params._id })
     .select("-password")
     .then((user) => {
-      Form.find({ postedBy: req.params.id })
-        .populate("postedBy", "_id name")
+      Form.find({ workBy: req.params.id })
+        .populate("workBy", "_id name")
         .exec((err, form) => {
           if (err) {
             return res.status(422).json({ error: err });
@@ -49,23 +49,7 @@ router.get("/:id", (req, res) => {
 
 //deleting user profile
 router.delete("/deleteprofile/:formId", verifyAccessToken, (req, res) => {
-  Form.findOne({ _id: req.params.postId })
-    .populate("postedBy", "_id")
-    .exec((err, post) => {
-      if (err || !post) {
-        return res.status(422).json({ error: err });
-      }
-      if (post.form._id.toString() === req.user._id.toString()) {
-        post
-          .remove()
-          .then((result) => {
-            res.json(result);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      }
-    });
+ 
 });
 
 //updating form
