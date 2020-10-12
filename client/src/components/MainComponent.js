@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Route} from 'react-router-dom';
 import Landing from './LandingComponent';
 import Home from './HomeComponent';
+import Skills from '../containers/skill/Skills';
+import Footer from '../components/footer/Footer'
 class Main extends Component {
     render() {
         return (
@@ -10,10 +12,10 @@ class Main extends Component {
                 <Route exact path="/home" component={Home} />
                {/* <Header/> 
                {/* <Home/> */}
-               {/* <About/> */}
-               {/* <Skills/> */}
-               {/* <Projects/> */}
-               {/* <Footer/>  */}
+                {/* <About/> */}
+                <Skills/>
+                {/* <Projects/> */}
+                <Footer/>
             </div>
         );
     }
