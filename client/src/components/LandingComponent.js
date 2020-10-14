@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Button, Carousel } from "react-bootstrap";
-import "../style.css";
+import "../stylesheets/landingstyle.css";
 import { images } from "./images";
 import 'aos/dist/aos.css';
 import Aos from 'aos';
@@ -38,7 +38,7 @@ function Landing() {
             navbar ? "landing-navbar active mb-5" : "landing-navbar mb-5"
           }
         >
-          <Navbar.Brand href="#home" className="brand ml-5">
+          <Navbar.Brand href="#home" className="brand ml-md-5">
            &#8918;Portfolio Generator/&#8919;
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -47,11 +47,11 @@ function Landing() {
               <Nav.Link href="#home" className="links">
                 GET STARTED
               </Nav.Link>
-              <Nav.Link href="#link" className="links">
+              <Nav.Link href="/templates" className="links">
                 TEMPLATES
               </Nav.Link>
             </Nav>
-            <Nav className="ml-auto mr-5">
+            <Nav className="ml-auto mr-md-5">
               <Nav.Link href="#home" className="links">
                 ABOUT
               </Nav.Link>
@@ -127,18 +127,18 @@ function Landing() {
           </div>
           <div className="col-12 col-md-6" data-aos="zoom-in">
             <div className="description mx-5 mb-5 mt-2">
-              <h2 className="px-5 pt-5">Choose your website template</h2>
-              <h5 className="px-5 pb-2">
+              <h2 className="px-5 pt-5">&#8858; Choose your website template</h2>
+              <h5 className="px-5 pb-2 d-none d-md-block">
                 Select from our industry-leading website templates, and color
                 pallets to best fit your personal style and professional need
               </h5>
-              <h2 className="px-5">Add your social media links</h2>
-              <h5 className="px-5 pb-2">
+              <h2 className="px-5">&#8858; Add your social media links</h2>
+              <h5 className="px-5 pb-2 d-none d-md-block">
                 Add your social media links to increase your reach and make your
                 website more useful
               </h5>
-              <h2 className="px-5">Make awesome mobile friendly portfolio</h2>
-              <h5 className="px-5 pb-5">
+              <h2 className="px-5">&#8858; Make awesome mobile friendly portfolio</h2>
+              <h5 className="px-5 pb-5 d-none d-md-block">
                 Easily make awesome mobile friendly portfolio website of your in
                 just few steps
               </h5>
@@ -163,9 +163,6 @@ function Landing() {
             <a className="animated px-5 py-3" href="#">Get Started</a>
           </div>
         </div>
-      </div>
-      <div style={{backgroundColor: "black"}} className="text-center">
-        <small style={{color: "white"}}>&copy; 2020 all rights reserved</small>
       </div>
     </div>
   );

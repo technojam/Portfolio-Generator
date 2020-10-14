@@ -1,0 +1,85 @@
+#templates-body {
+    background-image: url("../images/bg2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.temp {
+    position: relative;
+    overflow: hidden;
+}
+
+.temp .temp-overlay {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+  
+  .temp:hover .temp-overlay{
+    opacity: 1;
+  }
+  
+  
+  .temp-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    left: 20%;
+  }
+  
+  .temp:hover .temp-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+
+  .animated {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+  .animated:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .animated:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .animated:hover {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+  }
