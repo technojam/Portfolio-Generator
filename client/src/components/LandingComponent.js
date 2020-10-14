@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Nav, Button, Carousel } from "react-bootstrap";
+import { Navbar, Nav, Button, Carousel, Modal, Form } from "react-bootstrap";
 import "../stylesheets/landingstyle.css";
 import { images } from "./images";
-import 'aos/dist/aos.css';
-import Aos from 'aos';
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 function Landing() {
   const [navbar, setNavbar] = useState(false);
   const [index, setIndex] = useState(0);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -39,7 +43,7 @@ function Landing() {
           }
         >
           <Navbar.Brand href="#home" className="brand ml-md-5">
-           &#8918;Portfolio Generator/&#8919;
+            &#8918;Portfolio Generator/&#8919;
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -58,12 +62,49 @@ function Landing() {
               <Nav.Link href="#link" className="links">
                 REGISTER
               </Nav.Link>
-              <Nav.Link href="/home" className="links">
+              <Nav.Link onClick={handleShow} className="links">
                 LOGIN
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Login</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+              </Form.Group>
+            </Form>
+            <div className="text-center">
+              <a href="#">Don't have an account? Sign Up</a><br />
+              <a href="#">Forgot Password?</a>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" type="submit">Login</Button>
+          </Modal.Footer>
+        </Modal>
         <div className="row pt-5">
           <div className="col-12 col-md-6 p-5">
             <h1 style={{ color: "white", fontSize: "8vh" }}>
@@ -74,7 +115,7 @@ function Landing() {
               Simple tools for your big ideas.Start your free website trial
               today, with awesome templates, no credit card required.
             </h5>
-            <Button className="mt-3" variant="light" size="lg">
+            <Button onClick={handleShow} className="mt-3" variant="light" size="lg">
               GET STARTED
             </Button>
           </div>
@@ -127,7 +168,9 @@ function Landing() {
           </div>
           <div className="col-12 col-md-6" data-aos="zoom-in">
             <div className="description mx-5 mb-5 mt-2">
-              <h2 className="px-5 pt-5">&#8858; Choose your website template</h2>
+              <h2 className="px-5 pt-5">
+                &#8858; Choose your website template
+              </h2>
               <h5 className="px-5 pb-2 d-none d-md-block">
                 Select from our industry-leading website templates, and color
                 pallets to best fit your personal style and professional need
@@ -137,7 +180,9 @@ function Landing() {
                 Add your social media links to increase your reach and make your
                 website more useful
               </h5>
-              <h2 className="px-5">&#8858; Make awesome mobile friendly portfolio</h2>
+              <h2 className="px-5">
+                &#8858; Make awesome mobile friendly portfolio
+              </h2>
               <h5 className="px-5 pb-5 d-none d-md-block">
                 Easily make awesome mobile friendly portfolio website of your in
                 just few steps
@@ -147,20 +192,40 @@ function Landing() {
         </div>
       </div>
       <div className="container-fluid">
-        <h1 className="p-5 text-right" style={{ fontSize: "8vh" }} data-aos="zoom-in" >
+        <h1
+          className="p-5 text-right"
+          style={{ fontSize: "8vh" }}
+          data-aos="zoom-in"
+        >
           Learn how
           <br /> to get started
         </h1>
         <div className="row pb-3">
-          <div className="col-12 col-md-6 order-1 order-md-2" data-aos="zoom-in">
+          <div
+            className="col-12 col-md-6 order-1 order-md-2"
+            data-aos="zoom-in"
+          >
             <img className="px-5 img-fluid" src={images.portfolio6} />
           </div>
-          <div className="col-12 col-md-6 order-2 order-md-1" data-aos="zoom-in">
-            <h5 className="px-5 py-3">01. Choose a template and start your free trail.</h5>
-            <h5 className="px-5 py-3">02. Use our website builder to add your own text and photos.</h5>
-            <h5 className="px-5 py-3">03. Costomize the site according to your need.</h5>
-            <h5 className="px-5 py-3">04. Finish your work and get the domain of your site.</h5>
-            <a className="animated px-5 py-3" href="#">Get Started</a>
+          <div
+            className="col-12 col-md-6 order-2 order-md-1"
+            data-aos="zoom-in"
+          >
+            <h5 className="px-5 py-3">
+              01. Choose a template and start your free trail.
+            </h5>
+            <h5 className="px-5 py-3">
+              02. Use our website builder to add your own text and photos.
+            </h5>
+            <h5 className="px-5 py-3">
+              03. Costomize the site according to your need.
+            </h5>
+            <h5 className="px-5 py-3">
+              04. Finish your work and get the domain of your site.
+            </h5>
+            <a className="animated px-5 py-3" href="#">
+              Get Started
+            </a>
           </div>
         </div>
       </div>
