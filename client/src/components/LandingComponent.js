@@ -1,14 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import { Navbar, Nav, Button, Carousel, Modal, Form } from "react-bootstrap";
 import "../stylesheets/landingstyle.css";
 import { images } from "./images";
 import "aos/dist/aos.css";
 import Aos from "aos";
+import M from 'materialize-css'
+import {UserContext} from './MainComponent'
 
-function Landing() {
+const Landing=()=> {
+const {state,dispatch} = useContext(UserContext)
+
   const [navbar, setNavbar] = useState(false);
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(false);
+  const [password,setPassword]= useState("")
+   const [email,setEmail]= useState("")
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -30,6 +36,39 @@ function Landing() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+
+
+const PostData=()=>{
+    if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
+       return M.toast({html:"invalid email",classes:"#3f51b5 indigo"}) 
+    }
+    fetch("/signin",{
+        method:'post',
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+            password,
+            email
+        })
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data)
+       if(data.error){
+            M.toast({html:data.error,classes:"#e040fb purple accent-2"})
+       }
+       else{
+           localStorage.setItem('jwt',data.token)
+           localStorage.setItem('user',JSON.stringify(data.user))
+           dispatch({type:"USER",payload:data.user})
+           M.toast({html:"signedin successfull",classes:"#3f51b5 indigo"})
+        //    history.push('/')
+       }
+    }).catch(err=>{
+        console.log(err)
+    })
+}
 
   return (
     <div id="main">
@@ -82,7 +121,10 @@ function Landing() {
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control type="email" placeholder="Enter email"  value={email}
+                 onChange={(e)=>{
+             setEmail(e.target.value)
+         }} />
                 <Form.Text className="text-muted">
                   We'll never share your email with anyone else.
                 </Form.Text>
@@ -90,7 +132,11 @@ function Landing() {
 
               <Form.Group controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control type="password" placeholder="Password" value={password}
+                    onChange={(e)=>{
+             setPassword(e.target.value)
+         }}
+                />
               </Form.Group>
             </Form>
             <div className="text-center">
@@ -102,9 +148,9 @@ function Landing() {
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary" type="submit">Login</Button>
+            <Button variant="primary" type="submit"  onClick={()=>PostData()}>Login</Button> 
           </Modal.Footer>
-        </Modal>
+        </Modal> 
         <div className="row pt-5">
           <div className="col-12 col-md-6 p-5">
             <h1 style={{ color: "white", fontSize: "8vh" }}>
@@ -232,5 +278,6 @@ function Landing() {
     </div>
   );
 }
+
 
 export default Landing;
